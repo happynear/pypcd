@@ -59,7 +59,8 @@ if HAS_SENSOR_MSGS:
     pcd_type_to_pc2_type = dict((q, p) for (p, q) in pc2_pcd_type_mappings)
     __all__.extend(['pcd_type_to_pc2_type', 'pc2_type_to_pcd_type'])
 
-numpy_pcd_type_mappings = [(np.dtype('float32'), ('F', 4)),
+numpy_pcd_type_mappings = [(np.dtype('float16'), ('F', 2)),
+                           (np.dtype('float32'), ('F', 4)),
                            (np.dtype('float64'), ('F', 8)),
                            (np.dtype('uint8'), ('U', 1)),
                            (np.dtype('uint16'), ('U', 2)),
